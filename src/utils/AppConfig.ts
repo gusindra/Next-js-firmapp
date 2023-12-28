@@ -1,10 +1,10 @@
 export const AppConfig = {
-  site_name: 'Starter',
-  title: 'Next.js Boilerplate',
+  site_name: 'Homepage',
+  title: 'FirmApps AI',
   description:
-    'Starter code for your Next.js blog Boilerplate with Tailwind CSS',
-  url: 'https://example.com',
+    'Starter code for your Next.js Firm App AI Homepage with Tailwind CSS',
+  url: 'https://firmapps.ai',
   locale: 'en',
-  author: 'Anonymous',
+  author: 'Gusindra',
   pagination_size: 5,
 };

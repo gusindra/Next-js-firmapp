@@ -1,4 +1,4 @@
-# Next js Blog Boilerplate with Tailwind CSS [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
+# Next js Boilerplate with Tailwind CSS [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
 
 <p align="center">
   <a href="https://creativedesignsguru.com/demo/Nextjs-Blog-Boilerplate/"><img src="public/assets/images/nextjs-starter-banner.png?raw=true" alt="Nextjs starter banner"></a>
@@ -46,10 +46,6 @@ Built-in feature from Next.js:
 ### Requirements
 
 - Node.js and npm
-
-## Sponsors
-
-[![React SaaS Boilerplate Next.js](https://creativedesignsguru.com/assets/images/themes/nextlessjs-github-banner.png)](https://nextlessjs.com)
 
 ### Getting started
 
@@ -111,15 +107,6 @@ npm run build-prod
 
 Now, your blog is ready to be deployed. All generated files are located at `dist` folder, which you can deploy with any hosting service.
 
-### Deploy to Netlify
-
-Clone this repository on own GitHub account and deploy to Netlify:
-
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ixartz/Next-js-Blog-Boilerplate)
-
-### Contributions
-
-Everyone is welcome to contribute to this project. Feel free to open an issue if you have question or found a bug.
 
 ### License
 
@@ -129,6 +116,5 @@ See [LICENSE](LICENSE) for more information.
 
 ---
 
-Made with ♥ by [CreativeDesignsGuru](https://creativedesignsguru.com) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
+Made with ♥ by Firm Apps AI
 
-[![Sponsor Next JS Boilerplate](https://cdn.buymeacoffee.com/buttons/default-red.png)](https://www.buymeacoffee.com/ixartz)
