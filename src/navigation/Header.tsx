@@ -1,22 +1,24 @@
 import React from 'react';
 
+import { AssetUrl } from '../utils/AssetUrl';
+
 const Header = () => (
   <header className="fixed w-full">
     <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
         <a href="#" className="flex items-center">
           <img
-            src="./assets/images/logo.png"
+            src={AssetUrl.logo}
             className="h-20 mr-3 sm:h-20"
             alt="FirmApps AI Logo"
           />
         </a>
         <div className="flex items-center lg:order-2">
           <a
-            href="#"
+            href={'/try'}
             className="text-white bg-blue-400 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           >
-            Log in
+            Try Demo
           </a>
           <button
             data-collapse-toggle="mobile-menu-2"
@@ -59,7 +61,7 @@ const Header = () => (
           <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li>
               <a
-                href="#"
+                href={'/'}
                 className="block py-2 pl-3 pr-4 text-white bg-blue-400 rounded lg:bg-transparent lg:text-blue-400 lg:p-0 dark:text-white"
                 aria-current="page"
               >
@@ -67,24 +69,24 @@ const Header = () => (
               </a>
             </li>
 
-            <li className="group  relative dropdown  px-4 cursor-pointer font-bold text-base tracking-wide">
-              <a className="block py-2 pl-3 pr-4 mb-2 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+            <li className="group relative dropdown pb-4 px-4 cursor-pointer font-bold text-base tracking-wide">
+              <a className="block pb-6 pl-3 pr-4 mb-2 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
                 Product
               </a>
               <div className="group-hover:block dropdown-menu absolute hidden h-auto">
-                <ul className="top-0 w-full bg-transparent shadow">
-                  <li className="py-3 px-6 hover:bg-blue-600">
+                <ul className="top-0 w-full bg-transparent shadow mt-3">
+                  <li className="mb-4 hover:underline">
                     <a
-                      href="#vigurad"
-                      className="block w-full no-underline text-white font-bold text-xs hover:text-blue-100 cursor-pointer"
+                      href={'/product/viguard'}
+                      className="block w-full no-underline text-white font-bold text-base hover:text-blue-100 cursor-pointer"
                     >
                       ViGuard
                     </a>
                   </li>
-                  <li className="py-3 px-6 hover:bg-blue-600">
+                  <li className="mb-4 hover:underline">
                     <a
-                      href="#hireach"
-                      className="block w-full no-underline text-white font-bold text-xs hover:text-blue-100 cursor-pointer"
+                      href={'/product/hireach'}
+                      className="block w-full no-underline text-white font-bold text-base hover:text-blue-100 cursor-pointer"
                     >
                       HiReach
                     </a>
@@ -100,7 +102,7 @@ const Header = () => (
 
             <li>
               <a
-                href="#"
+                href={'/solution'}
                 className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Solution
@@ -108,7 +110,7 @@ const Header = () => (
             </li>
             <li>
               <a
-                href="#"
+                href={'/contact'}
                 className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Contact Us

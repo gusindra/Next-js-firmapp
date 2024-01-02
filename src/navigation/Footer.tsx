@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { AssetUrl } from '../utils/AssetUrl';
+
 const Footer = () => (
   <footer className="bg-white dark:bg-gray-800">
     <div className="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
@@ -10,22 +12,22 @@ const Footer = () => (
           </h3>
           <ul className="text-gray-500 dark:text-gray-400">
             <li className="mb-4">
-              <a href="#" className=" hover:underline">
+              <a href="#" className=" hover:underline text-blue-400">
                 About
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Careers
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Brand Center
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Blog
               </a>
             </li>
@@ -37,22 +39,22 @@ const Footer = () => (
           </h3>
           <ul className="text-gray-500 dark:text-gray-400">
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Discord Server
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Twitter
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Facebook
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Contact Us
               </a>
             </li>
@@ -62,19 +64,19 @@ const Footer = () => (
           <h3 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
             Legal
           </h3>
-          <ul className="text-gray-500 dark:text-gray-400">
+          <ul className="text-gray-500 dark:text-blue-400">
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Privacy Policy
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Licensing
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Terms
               </a>
             </li>
@@ -84,24 +86,24 @@ const Footer = () => (
           <h3 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
             Company
           </h3>
-          <ul className="text-gray-500 dark:text-gray-400">
+          <ul className="text-gray-500 dark:text-blue-400">
             <li className="mb-4">
-              <a href="#" className=" hover:underline">
+              <a href="#" className=" hover:underline text-blue-400">
                 About
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Careers
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Brand Center
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Blog
               </a>
             </li>
@@ -113,56 +115,38 @@ const Footer = () => (
           </h3>
           <ul className="text-gray-500 dark:text-gray-400">
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 iOS
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Android
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 Windows
               </a>
             </li>
             <li className="mb-4">
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:underline text-blue-400">
                 MacOS
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div className="text-center">
-        <a
-          href="#"
-          className="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white"
-        >
+      <div className="text-center my-8">
+        <span className="text-sm text-center text-gray-500 dark:text-gray-400 flex justify-center">
+          © {Date}{' '}
           <img
-            src="./images/logo.svg"
-            className="h-6 mr-3 sm:h-9"
-            alt="Landwind Logo"
+            src={AssetUrl.logo}
+            className="h-10 mr-3 mx-2 sm:h-6"
+            alt="Firm Apps Logo"
           />
-          Landwind
-        </a>
-        <span className="block text-sm text-center text-gray-500 dark:text-gray-400">
-          © 2021-2022 Landwind™. All Rights Reserved. Built with{' '}
-          <a
-            href="https://flowbite.com"
-            className="text-purple-600 hover:underline dark:text-purple-500"
-          >
-            Flowbite
-          </a>{' '}
-          and{' '}
-          <a
-            href="https://tailwindcss.com"
-            className="text-purple-600 hover:underline dark:text-purple-500"
-          >
-            Tailwind CSS
-          </a>
-          .
+          All Rights Reserved. Built by{' '}
+          <span className="font-bold mx-1"> PT Firm Apps AI.</span>
         </span>
         <ul className="flex justify-center mt-5 space-x-5">
           <li>
