@@ -10,7 +10,7 @@ export const Header = () => {
     <header className="fixed w-full z-50">
       <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-          <a href="#" className="flex items-center">
+          <a href={'/'} className="flex items-center">
             <img
               src={AssetUrl.logo}
               className="h-20 mr-3 sm:h-20"
@@ -81,15 +81,15 @@ export const Header = () => {
                 <a
                   className={
                     router.pathname === '/product/[slug]'
-                      ? 'lg:text-blue-400'
-                      : 'text-gray-700'
+                      ? 'lg:text-blue-400 px-3'
+                      : 'text-gray-700 px-3'
                   }
                 >
                   Product
                 </a>
                 <div className="group-hover:block dropdown-menu absolute hidden h-auto">
-                  <ul className="top-0 w-full bg-transparent shadow mt-3">
-                    <li className="mb-4 hover:underline">
+                  <ul className="top-0 w-full bg-transparent shadow mt-3 dark:bg-gray-900 px-4 py-1">
+                    <li className="mb-3 hover:underline dark:bg-gray-900">
                       <a
                         href={'/product/viguard'}
                         className="block w-full no-underline text-white font-bold text-base hover:text-blue-100 cursor-pointer"
@@ -97,7 +97,7 @@ export const Header = () => {
                         ViGuard
                       </a>
                     </li>
-                    <li className="mb-4 hover:underline">
+                    <li className="mb-3 hover:underline dark:bg-gray-900">
                       <a
                         href={'/product/hireach'}
                         className="block w-full no-underline text-white font-bold text-base hover:text-blue-100 cursor-pointer"
@@ -119,8 +119,8 @@ export const Header = () => {
                   href={'/solution'}
                   className={
                     router.pathname === '/solution'
-                      ? 'lg:text-blue-400'
-                      : 'text-gray-700'
+                      ? 'lg:text-blue-400 px-3'
+                      : 'text-gray-700 px-3'
                   }
                 >
                   Solution

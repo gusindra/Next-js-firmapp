@@ -3,12 +3,13 @@ title: 'HiReach AI Solution'
 description: HiReach AI Solution.
 date: '2020-03-03'
 modified_date: '2020-03-03'
-image: /assets/images//hireach2.png
+image: /assets/images/hireach2.png
 link: https://hireach.firmapps.ai
-feature_title: ViGuard Vision AI Analytic Alarm Platform
+feature_title: HiReach AI Solution
 feature: HiReach AI Platform is a fundamental capability platform that integrates our self-developed AI algorithm capabilities around comunication interaction capabilities.
-how_title: ViGuard Vision AI Analytic Alarm Platform
-how: HiReach AI capability integrated Notification with Social Message capabilities for different customers, enabling users to create AI artificial intelligence solutions in different scenarios based on the technical capabilities we provide. 
+how_title: HiReach Platform
+how: HiReach Platform capability to sending message with Social Message for different customers, enabling users to sending notification and marketing in different scenarios based on the technical capabilities we provide. 
+url: /product/hireach
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
