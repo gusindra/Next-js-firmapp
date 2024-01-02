@@ -1,9 +1,10 @@
 ---
-title: 'HiReach AI Solution'
-description: HiReach AI Solution.
+title: 'Manufacturer'
+description: 'Our AI Solution helps the manufacturers to recognize:'
+items: Sleeping Empolyee; Wrong Dressing; Fire & Smoke; Prohibitted Area Invasion; Wrong Occupied Path; Workers offsite; Liquid Leakage
 date: '2020-03-03'
 modified_date: '2020-03-03'
-image: /assets/images//hireach2.png
+image: /assets/images/manufacture.png
 link: https://hireach.firmapps.ai
 feature_title: ViGuard Vision AI Analytic Alarm Platform
 feature: HiReach AI Platform is a fundamental capability platform that integrates our self-developed AI algorithm capabilities around comunication interaction capabilities.
@@ -11,16 +12,4 @@ how_title: ViGuard Vision AI Analytic Alarm Platform
 how: HiReach AI capability integrated Notification with Social Message capabilities for different customers, enabling users to create AI artificial intelligence solutions in different scenarios based on the technical capabilities we provide. 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
 Example with image:
-
-![Error](@@baseUrl@@/assets/images/posts/error.png)
-
-Example code block:
-
-```js
-function myFunction() {
-  return true;
-}
-```
