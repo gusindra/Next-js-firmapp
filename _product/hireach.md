@@ -7,8 +7,10 @@ image: /assets/images/hireach2.png
 link: https://hireach.firmapps.ai
 feature_title: HiReach AI Solution
 feature: HiReach AI Platform is a fundamental capability platform that integrates our self-developed AI algorithm capabilities around comunication interaction capabilities.
+feature_image: /assets/images/promotion.png
 how_title: HiReach Platform
 how: HiReach Platform capability to sending message with Social Message for different customers, enabling users to sending notification and marketing in different scenarios based on the technical capabilities we provide. 
+how_image: /assets/images/notification.png
 url: /product/hireach
 ---
 

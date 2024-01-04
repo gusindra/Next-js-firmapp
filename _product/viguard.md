@@ -7,8 +7,10 @@ image: /assets/images/viguard1.png
 link: https://viguard.firmapps.ai
 feature_title: ViGuard Vision AI Analytic Alarm Platform
 feature: Fundamental capability platform that integrates our self-developed AI algorithm capabilities around image recognition and our self-developed audio and video interaction capabilities. This fundamental capability platform aims to providedifferent customers with the underlying capabilities based on AI image recognition algorithms and provide corresponding API services, fully meeting the application needs of various developers and users.
+feature_image: /assets/images/alarm.png
 how_title: The AI+Audio and Video capability
 how: Integrated AI Video Analytic Alarm Platform mainly provides SaaS capabilities for different customers, enabling users to create AI artificial intelligence solutions in different scenarios based on the technical capabilities we provide. 
+how_image: /assets/images/video-audio.png
 url: /product/viguard
 ---
 

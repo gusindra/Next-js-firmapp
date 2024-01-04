@@ -5,7 +5,6 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { Content } from '../../content/Content';
 import { Meta } from '../../layout/Meta';
 import { Main } from '../../templates/Main';
-import { AssetUrl } from '../../utils/AssetUrl';
 import { markdownToHtml } from '../../utils/Markdown';
 import { getAllPosts, getPostBySlug } from '../../utils/Product';
 
@@ -21,7 +20,9 @@ type IPostProps = {
   link: string;
   feature: string;
   feature_title: string;
+  feature_image: string;
   how_title: string;
+  how_image: string;
   how: string;
 };
 
@@ -42,14 +43,14 @@ const DisplayProduct = (props: IPostProps) => (
                 href={props.link}
                 className="inline-flex no-underline items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
               >
-                Learn about {props.title}
+                Request Demo {props.title}
               </a>
             </div>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
             <img src={props.image} alt="hero image" />
           </div>
-          <div className="text-xs text-right lg:col-span-12">
+          <div className="text-xs text-right lg:col-span-12 hidden lg:flex">
             Illustration by{' '}
             <a
               href="https://icons8.com/illustrations/author/GrbQqWBEhaDS"
@@ -346,19 +347,23 @@ const DisplayProduct = (props: IPostProps) => (
                 of traditional ITSM solutions.
               </p>
             </div>
-            <img
-              className="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex"
-              src={AssetUrl.feature_1}
-              alt="dashboard feature image"
-            />
+            <div className="flex justify-center">
+              <img
+                className="hidden w-2/3 mb-4 rounded-lg lg:mb-0 lg:flex "
+                src={props.feature_image}
+                alt="dashboard feature image"
+              />
+            </div>
           </div>
 
           <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-            <img
-              className="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex"
-              src={AssetUrl.feature_2}
-              alt="feature image 2"
-            />
+            <div className="flex justify-center">
+              <img
+                className="hidden w-2/3 mb-4 rounded-lg lg:mb-0 lg:flex"
+                src={props.how_image}
+                alt="feature image 2"
+              />
+            </div>
             <div className="text-gray-500 sm:text-lg dark:text-gray-400">
               <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
                 {props.how_title}
@@ -498,7 +503,9 @@ export const getStaticProps: GetStaticProps<IPostProps, IPostUrl> = async ({
     'link',
     'feature',
     'feature_title',
+    'feature_image',
     'how_title',
+    'how_image',
     'how',
   ]);
   const content = await markdownToHtml(post.content || '');
@@ -513,8 +520,10 @@ export const getStaticProps: GetStaticProps<IPostProps, IPostUrl> = async ({
       link: post.link,
       feature: post.feature,
       feature_title: post.feature_title,
+      feature_image: post.feature_image,
       how_title: post.how_title,
       how: post.how,
+      how_image: post.how_image,
       content,
     },
   };

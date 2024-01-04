@@ -160,7 +160,7 @@ const Footer = () => (
             </li>
           </ul>
         </div> */}
-        <div>
+        <div className="col-span-2">
           {/* <h3 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
             Contact us
           </h3> */}
