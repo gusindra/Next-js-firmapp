@@ -8,7 +8,10 @@ class MyDocument extends Document {
     return (
       <Html lang={AppConfig.locale}>
         <Head />
-        <body>
+        <body
+          className="flex flex-col bg-white 
+        dark:bg-gray-900"
+        >
           <Main />
           <NextScript />
         </body>

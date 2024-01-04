@@ -161,16 +161,16 @@ const Footer = () => (
           </ul>
         </div> */}
         <div>
-          <h3 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+          {/* <h3 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
             Contact us
-          </h3>
-          <div className="text-gray-500 dark:text-gray-400">
-            <p className="mb-4">
+          </h3> */}
+          <div className="text-gray-500 dark:text-gray-400 my-16">
+            {/* <p className="mb-4">
               Get in touch:
               <a href="mailto:biz@firmapps.ai" className="text-blue-400 mx-2">
                 ray@firmapps.ai
               </a>
-            </p>
+            </p> */}
             <p className="mb-6">
               <span className="text-blue-400">
                 <span className="text-sm text-gray-500 dark:text-gray-400">

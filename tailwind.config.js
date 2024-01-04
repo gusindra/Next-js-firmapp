@@ -1,5 +1,12 @@
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}', './_posts/**/*.md'],
+  darkMode: 'class',
+  content: [
+    './src/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './_posts/**/*.md',
+    './_product/**/*.md',
+    './_solution/**/*.md',
+  ],
   theme: {
     fontSize: {
       xs: '0.75rem',
