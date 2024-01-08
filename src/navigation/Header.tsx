@@ -73,7 +73,7 @@ export const Header = () => {
                   className={
                     router.pathname === '/'
                       ? 'lg:text-blue-400'
-                      : 'text-gray-700'
+                      : 'text-gray-700 dark:text-gray-300'
                   }
                   aria-current="page"
                 >
@@ -81,30 +81,30 @@ export const Header = () => {
                 </a>
               </li>
 
-              <li className="group relative dropdown pb-4 px-4 cursor-pointer font-bold text-base tracking-wide">
+              <li className="group relative dropdown pb-4 cursor-pointer font-bold text-base tracking-wide">
                 <a
                   className={
                     router.pathname === '/product/[slug]'
-                      ? 'lg:text-blue-400 px-3'
-                      : 'text-gray-700 px-3'
+                      ? 'lg:text-blue-400'
+                      : 'text-gray-700 dark:text-gray-300'
                   }
                 >
                   Product
                 </a>
                 <div className="group-hover:block dropdown-menu absolute hidden h-auto">
-                  <ul className="top-0 w-full bg-transparent shadow mt-3 dark:bg-gray-900 px-4 py-1">
-                    <li className="mb-3 hover:underline dark:bg-gray-900">
+                  <ul className="top-0 w-full shadow mt-3 dark:bg-gray-900 bg-white px-4 py-1">
+                    <li className="mb-3 hover:underline dark:bg-gray-900 bg-white">
                       <a
                         href={'/product/viguard'}
-                        className="block w-full no-underline text-white font-bold text-base hover:text-blue-100 cursor-pointer"
+                        className="block w-full no-underline text-gray-700 dark:text-gray-300 font-bold text-base hover:text-blue-100 cursor-pointer"
                       >
                         ViGuard
                       </a>
                     </li>
-                    <li className="mb-3 hover:underline dark:bg-gray-900">
+                    <li className="mb-3 hover:underline dark:bg-gray-900 bg-white">
                       <a
                         href={'/product/hireach'}
-                        className="block w-full no-underline text-white font-bold text-base hover:text-blue-100 cursor-pointer"
+                        className="block w-full no-underline text-gray-700 dark:text-gray-300 font-bold text-base hover:text-blue-100 cursor-pointer"
                       >
                         HiReach
                       </a>
@@ -123,8 +123,8 @@ export const Header = () => {
                   href={'/solution'}
                   className={
                     router.pathname === '/solution'
-                      ? 'lg:text-blue-400 px-3'
-                      : 'text-gray-700 px-3'
+                      ? 'lg:text-blue-400'
+                      : 'text-gray-700 dark:text-gray-300'
                   }
                 >
                   Solution

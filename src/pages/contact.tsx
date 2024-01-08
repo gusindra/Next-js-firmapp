@@ -5,7 +5,13 @@ import { Main } from '../templates/Main';
 import { AssetUrl } from '../utils/AssetUrl';
 
 const Contact = () => {
-  const [input, setInput] = useState('');
+  const [title, setTitle] = useState('');
+  const [name, setName] = useState('');
+  const [company, setCompany] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+
   //   e.preventDefault();
   //   try {
   //     const res = await fetch('./api/subscribe', {
@@ -28,6 +34,42 @@ const Contact = () => {
   //   }
   // };
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = {
+      title,
+      name,
+      email,
+      phone,
+      company,
+      message,
+    };
+    console.log(form);
+    try {
+      const rawResponse = await fetch('/api/googlesheet', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      });
+      const content = await rawResponse.json();
+      // print to screen
+      console.log(content.data.tableRange);
+    } catch (err) {
+      console.log(err);
+    }
+
+    // Reset the form fields
+    setMessage('');
+    setTitle('');
+    setCompany('');
+    setPhone('');
+    setName('');
+    setEmail('');
+  };
+
   return (
     <Main meta={<Meta title="Lorem ipsum" description="Lorem ipsum" />}>
       <section className="bg-gray-50 dark:bg-gray-800">
@@ -48,7 +90,7 @@ const Contact = () => {
               />
             </div>
           </div>
-          <div className="mr-auto place-self-center lg:col-span-7">
+          <div className="mr-auto place-self-center lg:col-span-7 max-w-lg">
             <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
               <ul>
                 <li>
@@ -58,7 +100,7 @@ const Contact = () => {
                 </li>
               </ul>
             </p>
-            <form className="w-full max-w-lg">
+            <form className="w-full " onSubmit={handleSubmit}>
               <div className="grid grid-cols-10 -mx-3 mb-6">
                 <div className="w-full col-span-3 px-3 mb-6 md:mb-0">
                   <div className="relative">
@@ -68,24 +110,14 @@ const Contact = () => {
                     >
                       Job Title
                     </label>
-                    <select
-                      className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="grid-state"
-                    >
-                      <option>Employee</option>
-                      <option>Manager</option>
-                      <option>Director</option>
-                      <option>Owner</option>
-                    </select>
-                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                      <svg
-                        className="fill-current h-4 w-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                      </svg>
-                    </div>
+                    <input
+                      value={title}
+                      onChange={(e) => setTitle(e.target.value)}
+                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="title"
+                      type="text"
+                      placeholder="Owner"
+                    />
                   </div>
                 </div>
                 <div className="w-full col-span-7 px-3 mb-6 md:mb-0">
@@ -96,6 +128,8 @@ const Contact = () => {
                     Full Name
                   </label>
                   <input
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="grid-zip"
                     type="text"
@@ -112,8 +146,8 @@ const Contact = () => {
                     Email
                   </label>
                   <input
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     id="grid-first-name"
                     type="text"
@@ -131,6 +165,8 @@ const Contact = () => {
                     WhatsApp
                   </label>
                   <input
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="grid-last-name"
                     type="text"
@@ -147,6 +183,8 @@ const Contact = () => {
                     Company Name
                   </label>
                   <input
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="grid-password"
                     type="text"
@@ -155,6 +193,34 @@ const Contact = () => {
                   {/* <p className="text-gray-600 text-xs italic">
                     Make it as long and as crazy as you'd like
                   </p> */}
+                </div>
+              </div>
+              <div className="flex flex-wrap -mx-3 mb-6">
+                <div className="w-full px-3">
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    htmlFor="grid-first-name"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="message"
+                    placeholder="Your message here"
+                  />
+                  {/* <p className="text-gray-600 text-xs italic">
+                    Make it as long and as crazy as you'd like
+                  </p> */}
+                  <div className="flex items-center justify-center">
+                    <button
+                      type="submit"
+                      className="text-white bg-blue-400 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    >
+                      Send
+                    </button>
+                  </div>
                 </div>
               </div>
             </form>
